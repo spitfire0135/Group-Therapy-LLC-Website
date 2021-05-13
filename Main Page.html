@@ -1,105 +1,186 @@
-<title>Group Therapy LLC</title>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Group Therapy LLC</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Group Therapy LLC Webpage</title>
+    <!--include CSS and JS links-->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="script.js"></script>
+  </head>
 
-<head>
-  <h2 id="top">* Group Therapy LLC *</h2>
-  <p id="top_footer">Aiming for Superiority</p>
-  <!--include CSS and JS links-->
-  <!--<link type="text/css" rel="stylesheet" href=" "></link>-->
-</head>
-
-<body>
-  <div id="header">
-    <h3 id="js_greeting">Welcome!</h3>
-    <!--Create a form that logs first name, last name, contact number, brief message of reason for contact request-->
-  </div>
-  <div id="form">
-    <p id="form_header">Ask a question, fill in the details below:
-    </p>
-    <form>
-      <label for="fname">First name:</label><br>
-      <input type="text" id="fname" name="fname" method="post"><br>
-      <label for="lname">Last name:</label><br>
-      <input type="text" id="lname" name="lname" method="post"><br>
-      <label for="phone">Phone Number:</label><br>
-      <input type="number" id="phone" name="phone" method="post"><br>
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email" method="post"><br>
-      <p>Have a message or question? Leave it below:</p>
-      <textarea name="message" rows="10" cols="50" method="post">
-      </textarea><br>
-      <input type="submit" value="Submit">
-    </form>
-  </div>
-  <h3>Hours of Operation:</h3>
-  <p><em>By appointment only!</em></p>
-  <p>
-    <strong>Call: 816-550-3446</strong></p>
-  <p><em> or </em></p>
-  <p style="text-decoration: underline"><strong>Click on a day to schedule.</strong></p>
-  <div id="schedule">
-    <table>
-      <tr>
-        <th>Sunday</th>
-        <th></th>
-        <th>Monday</th>
-        <th></th>
-        <th>Tuesday</th>
-        <th></th>
-        <th>Wednesday</th>
-        <th></th>
-        <th>Thursday</th>
-        <th></th>
-        <th>Friday</th>
-        <th></th>
-        <th>Saturday</th>
-      </tr>
-      <tr>
-        <td>Closed</td>
-        <td></td>
-        <td><a href="mailto:sboguske@kc.rr.com" target="_blank">Schedule</a></td>
-        <td></td>
-        <td><a href="mailto:sboguske@kc.rr.com" target="_blank">Schedule</a></td>
-        <td></td>
-        <td><a href="mailto:sboguske@kc.rr.com" target="_blank">Schedule</a></td>
-        <td></td>
-        <td><a href="mailto:sboguske@kc.rr.com" target="_blank">Schedule</a></td>
-        <td></td>
-        <td><a href="mailto:sboguske@kc.rr.com" target="_blank">Schedule</a></td>
-        <td></td>
-        <td><a href="mailto:sboguske@kc.rr.com" target="_blank">Schedule</a></td>
-      </tr>
-    </table>
-  </div>
-  <!--Displays a greeting, different depending on the time of day-->
-  <br>
-  <div>
+  <body>
+    <div id="top"></div>
+    <div id="company_deets">
+      <h1 id="company_name">* Group Therapy LLC *</h1>
+      <p id="slogan"><em>Aiming for Superiority</em></p>
+      <p id="js_greeting">Welcome!</p>
+    </div>
+    <!--Create a form that logs first name, last name, contact number, email, and brief message of reason for contact request-->
+    <div id="form">
+      <p id="form_header">Ask a question, fill in the details below:</p>
+      <form>
+        <div class="form">
+          <label for="fname">First name:</label><br />
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            placeholder="ex. John"
+            method="post"
+          /><br />
+          <label for="lname">Last name:</label><br />
+          <input
+            type="text"
+            id="lname"
+            name="lname"
+            placeholder="ex. Smith"
+            method="post"
+          /><br />
+        </div>
+        <div class="form">
+          <label for="phone">Phone Number (no dashes):</label><br />
+          <input
+            type="number"
+            id="phone"
+            name="phone"
+            placeholder="ex. 19601237654"
+            method="post"
+          /><br />
+          <label for="email">Email:</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="ex. smith321@gmail.com"
+            method="post"
+          /><br />
+        </div>
+        <p>Have a message or question? Leave it below:</p>
+        <textarea id="message" name="message" rows="10" cols="30" method="post">
+        </textarea
+        ><br />
+        <input id="submit_button" type="submit" value="Submit" />
+      </form>
+    </div>
+    <h3>Hours of Operation:</h3>
+    <p><em>By appointment only!</em></p>
     <p>
-      Also...
+      <strong>Call: 816-550-3446</strong>
     </p>
-    <a href="" id="fblink">Be Sure to Like us on FaceBook!</a>
-    <script>
-      var today = new Date();
-      var hourNow = today.getHours();
-      var greeting;
-      if (hourNow >= 18) {
-        greeting = 'Good Evening and Welcome!';
-      } else if (hourNow >= 12) {
-        greeting = 'Good Afternoon and Welcome!';
-      } else if (hourNow > 0) {
-        greeting = 'Good Morning and Welcome!';
-      } else {
-        greeting = 'WELCOME!';
-      }
-      document.getElementById("js_greeting").innerHTML = ('<h3>' + greeting + '</h3>');
-
-    </script>
-  </div>
-  <br>
-  <a href="#top">TOP</a>
-  <br>
-  <div>
-    <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=a6f39e40900665262603d42d763b434d76f7aefa'></script>
+    <p><em> or </em></p>
+    <p style="text-decoration: underline">
+      <strong>Click on a day to schedule.</strong>
+    </p>
+    <div id="schedule">
+      <table>
+        <tr>
+          <th>Sunday</th>
+          <th></th>
+          <th>Monday</th>
+          <th></th>
+          <th>Tuesday</th>
+          <th></th>
+          <th>Wednesday</th>
+          <th></th>
+          <th>Thursday</th>
+          <th></th>
+          <th>Friday</th>
+          <th></th>
+          <th>Saturday</th>
+        </tr>
+        <tr>
+          <td>Contact Us</td>
+          <td></td>
+          <td>9am-5pm</td>
+          <td></td>
+          <td>9am-5pm</td>
+          <td></td>
+          <td>9am-5pm</td>
+          <td></td>
+          <td>9am-5pm</td>
+          <td></td>
+          <td>9am-5pm</td>
+          <td></td>
+          <td>9am-5pm</td>
+        </tr>
+        <tr>
+          <td>Closed</td>
+          <td></td>
+          <td>
+            <a
+              href="mailto:sboguske@kc.rr.com?subject=I'd like to schedule for a Monday."
+              target="_blank"
+              class="contact"
+              >Schedule</a
+            >
+          </td>
+          <td></td>
+          <td>
+            <a
+              href="mailto:sboguske@kc.rr.com?subject=I'd like to schedule for a Tuesday."
+              target="_blank"
+              class="contact"
+              >Schedule</a
+            >
+          </td>
+          <td></td>
+          <td>
+            <a
+              href="mailto:sboguske@kc.rr.com?subject=I'd like to schedule for a Wednesday."
+              target="_blank"
+              class="contact"
+              >Schedule</a
+            >
+          </td>
+          <td></td>
+          <td>
+            <a
+              href="mailto:sboguske@kc.rr.com?subject=I'd like to schedule for a Thursday."
+              target="_blank"
+              class="contact"
+              >Schedule</a
+            >
+          </td>
+          <td></td>
+          <td>
+            <a
+              href="mailto:sboguske@kc.rr.com?subject=I'd like to schedule for a Friday."
+              target="_blank"
+              class="contact"
+              >Schedule</a
+            >
+          </td>
+          <td></td>
+          <td>
+            <a
+              href="mailto:sboguske@kc.rr.com?subject=I'd like to schedule for a Saturday."
+              target="_blank"
+              class="contact"
+              >Schedule</a
+            >
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!--Displays a greeting, different depending on the time of day-->
+    <br />
+    <div>
+      <p>
+        Also...
+      </p>
+      <br>
+      <a href="" id="fblink" class="contact">Be Sure to Like us on FaceBook!</a>
+      </br>
+      <p id="js_quotes">~Quotes_Error~</p>
+    </div>
+    <br />
+    <a href="#top" id="top_bottom">TOP</a>
+    <br />
+    <!--hit counter to display number of page visits-->
+  <div id="hit_counter">
     <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/754599/t/9"></script>
   </div>
-
 </body>
+</html>
